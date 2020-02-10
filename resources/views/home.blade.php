@@ -1,75 +1,46 @@
+@extends('layouts.app')
 
-    @include('layout.topo')
+@section('content')
+<div class="container">
 
-    @yield('conteudo')
-
-    @include('layout.footer')
-
-    <div class="card bg-dark text-white">
-        <img src="..." class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text">Last updated 3 mins ago</p>
+        <div class="heading-left">
+            <h1 class="page-title"><i class="fas fa-info-circle"></i> Dashboard admin</h1>
+            <p class="page-subtitle">
+                Algumas informações importantes</p>
         </div>
-      </div>
-    
-    <main class="page projects-page">
-        <section class="portfolio-block projects-cards">
-            <div class="container">
-                <div class="heading">
-                    <h2>Recent Work</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="/q defalt.jpg" alt="Card Image"></a>
-                            <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="image2.jpg" alt="Card Image"></a>
-                            <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image3.jpg" alt="Card Image"></a>
-                            <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image4.jpg" alt="Card Image"></a>
-                            <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image5.jpg" alt="Card Image"></a>
-                            <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/nature/image6.jpg" alt="Card Image"></a>
-                            <div class="card-body">
-                                <h6><a href="#">Lorem Ipsum</a></h6>
-                                <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="card" style="width: 24rem;">
+            <div class="card-header"> <i class="fas fa-chevron-circle-down"></i>
+              Menu de navegação.
             </div>
-        </section>
-    </main>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="fas fa-home"></i> - Página inicial.</li>
+              <li class="list-group-item"><i class= "fas fa-search-plus"></i> - Resultado da pequisa.</li>
+              <li class="list-group-item"><i class="fas fa-file-download"></i> - Artigos Salvos</li>
+            </ul>
+          </div>   
+
+          <div  style="width: 10rem;">
+ 
+          </div>
+          
+          <div class="card" style="width: 24rem;">
+            <div class="card-header"><i class="fas fa-microchip"></i>
+              Técnologias utilizadas.
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fab fa-php"></i> php: ^7.2 </li>
+                <li class="list-group-item"><i class="fab fa-laravel"></i> laravel/framework: ^6.2 </li>
+                <li class="list-group-item"><i class="fab fa-laravel"></i> laravel-mix: ^5.0.1 </li>
+                <li class="list-group-item"><i class="fab fa-laravel"></i> laravel/tinker: ^2.0 </li>
+                <li class="list-group-item"><i class="fab fa-laravel"></i> laravel/ui: ^1.1 </li>
+                <li class="list-group-item"><i class="fab fa-bootstrap"></i> bootstrap: ^4.0.0 </li>
+            </ul>
+          </div>
+
+    </div>
+</div>
+
+@endsection
+
