@@ -21,7 +21,7 @@ versão mais recente que você conseguir) e Framework Laravel – versão 5 ou  
 
  2.  Abrir o cmd no diretório do projeto e executar o comando 
 
-  	`composer install` 
+  	composer install 
 
  3. Configurar a base de dados mysql
 	 
