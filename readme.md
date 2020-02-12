@@ -41,8 +41,8 @@ versão mais recente que você conseguir) e Framework Laravel – versão 5 ou  
  1. Migrar tabelas para o banco criado e e realizar a criação do usuario adm.
 	 Novamente no CMD, no diretório do projeto, executar:
      
-    - Cria as tabelas:`php artisan migrate`               
-    - Cria o usuário: `php artisan db:seed`
+    - Criar tabelas:`php artisan migrate`               
+    - Criar usuário: `php artisan db:seed`
 
 - usuário: **admin@admin.com**
 - senha: **admin**
