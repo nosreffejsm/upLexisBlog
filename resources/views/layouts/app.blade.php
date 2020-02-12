@@ -36,13 +36,13 @@
                 @else
                 <ul class="navbar-nav">
                     <li class="nav-item active" id="nav1">
-                    <a class="nav-link w-50 p-3" onclick = "navactive('#nav1')" href="{{ url('/') }}" ata-toggle="tooltip" title="Inicio"><i class="fas fa-home"></i></a>    
+                    <a class="nav-link w-50 p-3" href="{{ url('/') }}" ata-toggle="tooltip" title="Inicio"><i class="fas fa-home"></i></a>    
                     </li>
                 <li class="nav-item" id="nav2">
-                    <a class="nav-link w-50 p-3" onclick = "navactive('#nav2')" href="{{ url('/captura') }}" ata-toggle="tooltip" title="Artigos Capturados"><i class= "fas fa-search-plus"></i></a>    
+                    <a class="nav-link w-50 p-3" href="{{ url('/captura') }}" ata-toggle="tooltip" title="Artigos Capturados"><i class= "fas fa-search-plus"></i></a>    
                 </li>
                 <li class="nav-item" id="nav3">
-                    <a class="nav-link w-50 p-3" onclick = "navactive('#nav3')" href="{{ url('/salvo') }}" ata-toggle="tooltip" title="Artigos Salvos"><i class="fas fa-file-download"></i></a>    
+                    <a class="nav-link w-50 p-3" href="{{ url('/salvo') }}" ata-toggle="tooltip" title="Artigos Salvos"><i class="fas fa-file-download"></i></a>    
                 </li>
                 </ul>
                 <form class="mx-2 my-auto d-inline w-100">

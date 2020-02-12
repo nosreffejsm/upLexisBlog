@@ -22,7 +22,6 @@
     <main class="page projects-page">
         <section class="portfolio-block projects-cards">
             <div class="container">
-
                 <div class="row">
                 @foreach($temps as $temp)
                     <div class="col-md-6 col-lg-4">
@@ -40,7 +39,6 @@
             </div>
         </section>
     </main>
-    
 </div>
 
 @endsection

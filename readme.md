@@ -1,3 +1,70 @@
+#  Teste PHP upLexis
+Você deverá desenvolver uma aplicação que utilize PHP (se possível na  
+versão mais recente que você conseguir) e Framework Laravel – versão 5 ou  acima. A aplicação deve ser capaz de realizar uma requisição ao Blog da upLexis (http://www.uplexis.com.br/blog) e capturar artigos de acordo com a pesquisa realizada.
+
+
+# Tecnologias utilizadas
+
+ - php: ^7.2,
+ - laravel/framework: ^6.2,
+ - laravel-mix: ^5.0.1,
+ - laravel/tinker: ^2.0,
+ - laravel/ui: ^1.1
+ - bootstrap: ^4.0.0,
+ - MySql
+
+## Instalação
+
+ 1. Baixar o repositório. 
+
+      `$ git clone https://github.com/nosreffejsm/upLexisBlog.git` 
+
+ 2.  Abrir o cmd no diretório do projeto e executar o comando 
+
+    `composer install`
+
+ 3. Configurar a base de dados mysql
+	 
+     **obs.: Esses dados são variáveis, o preenchimento deles depende da sua configuração/instalação.**
+     
+     Criar o banco mySQL: **uplexisdb**
+     
+     Arquivo: ...\upLexisBlog\ .env
+
+    	DB_CONNECTION=mysql
+    	DB_HOST=127.0.0.1
+    	DB_PORT=3306
+    	DB_DATABASE=uplexisdb
+    	DB_USERNAME=root
+    	DB_PASSWORD=
+ 
+ 1. Migrar tabelas para o banco criado e e realizar a criação do usuario adm.
+	 Novamente no CMD, no diretório do projeto, executar:
+     
+    - Cria as tabelas:`php artisan migrate`               
+    - Cria o usuário: `php artisan db:seed`
+
+- usuário: **admin@admin.com**
+- senha: **admin**
+
+5. Ainda no terminal/cmd, iniciar o servidor
+
+    `php artisan serve`
+
+------------------------------------------------------------------------------
+
+Agora é só acessar o endereço gerado no terminal/cmd e usar as credenciais. 
+usuário: **admin@admin.com** senha: **admin**
+
+## ScreenShot
+
+![alt text](https://i.ibb.co/0MFvdxw/Opera-Instant-neo-2020-02-10-132256-127-0-0-1.png)
+![alt text](https://i.ibb.co/3mSLMSW/Opera-Instant-neo-2020-02-10-132352-127-0-0-1.png)
+![alt text](https://i.ibb.co/prd7Dtx/Opera-Instant-neo-2020-02-10-132420-127-0-0-1.png)
+
+--------------------------------------------------------------------------------
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">

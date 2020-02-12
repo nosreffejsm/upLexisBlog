@@ -1,7 +1,15 @@
 <script type="text/javascript">
 
-    var search = document.querySelector("#search");
+    var search = document.getElementById("search");
     var artigos = [];
+
+    var input = document.getElementById("input");
+        input.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("search").click();
+      }
+    });
 
     function msgAdd(sts,msg) 
     {
@@ -113,9 +121,9 @@
                 msgAdd(1, "Tratando os dados...");
                 var titulo = $(e).find('.title').html();
                 var link = $(e).find('.btn-uplexis').attr('href');
-                var imga = $(e).find('.row').attr('style');
-                var imgb = imga.replace("background-image: url('","");
-                var img = imgb.replace("')","");
+                var img = $(e).find('.row').attr('style');
+                    img = img.replace("background-image: url('","");
+                    img = img.replace("')","");
                 artigos.push({titulo: titulo, link: link,img: img});
             });
             if (artigos.length != 0) 

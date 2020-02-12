@@ -16,7 +16,7 @@ class CreateTempviewsTable extends Migration
         Schema::create('tempviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_usuario')->unsigned();
-            $table->string('titulo');  
+            $table->string('titulo');
             $table->string('link');
             $table->string('img');
             $table->timestamps();

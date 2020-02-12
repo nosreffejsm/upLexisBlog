@@ -46,69 +46,59 @@ class HomeController extends Controller
         return view('/salvo', compact('registros'));
     }
 
-    public function list()
+    public function del($id)
     {
-        $registros = artigo::all();
-        return view('artigo',compact('registros'));
-    }
-
-    public function del($id){
         artigo::find($id)->delete();
         return redirect()->route('salvo');
     }
     
     public function artigosSave(Request $request)
     {
-
-         $dados = $request["array"];
+        $dados = $request["array"];
          
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-        {   
-
-            Schema::dropIfExists('tempviews');
-
-            Schema::create('tempviews', function (Blueprint $table) 
-            {
-                $table->bigIncrements('id');
-                $table->bigInteger('id_usuario')->unsigned();
-                $table->string('titulo');  
-                $table->string('link');
-                $table->string('img');
-                $table->timestamps();
-            });
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            tempview::where('id_usuario', '!=', 0)->delete();
 
             $qtd = 0;
             $iduser = (Auth::user()->id);
 
-            if(isset($request["array"]))
-            {
-                
-                foreach($request["array"] as $dados)
-                {
-
+            if (isset($request["array"])) {
+                foreach ($request["array"] as $dados) {
                     $titulo = $dados["titulo"];
                     $link = $dados["link"];
                     $img = $dados["img"];
-                    $artigo = new Artigo();
+    
                     $tempview = new tempview();
-                    $titulo = $dados["titulo"];
-                    $link = $dados["link"];
-                    $img = $dados["img"];
-                    $artigo->id_usuario = $iduser;
-                    $artigo->titulo = $titulo;
-                    $artigo->link = $link;
+  
                     $tempview->id_usuario = $iduser;
                     $tempview->titulo = $titulo;
                     $tempview->link = $link;
                     $tempview->img = $img;
                     $tempview->save();
-                    $artigo->save();
                     $tempview = null;
                     $qtd++;
-                    $artigo = null;
+
+                    $verificaDB = Artigo::where(
+                        'titulo',
+                        '=',
+                        $titulo
+                    )->where(
+                        'link',
+                        '=',
+                        $link
+                    )->first();
+
+                    if (is_null($verificaDB)) {
+                        $artigo = new Artigo();
+                        $artigo->id_usuario = $iduser;
+                        $artigo->titulo = $titulo;
+                        $artigo->link = $link;
+                        $artigo->save();
+                        $artigo = null;
+                    }
                 }
-                return response()->json(['success'=>$qtd]);
+                return response()->json(['success' => $qtd]);
             }
         }
     }

@@ -22,5 +22,3 @@ Route::post('/', 'HomeController@artigosSave')->name('artigosSave')->middleware(
 Route::get('/salvo', 'HomeController@salvo')->name('salvo')->middleware('auth');
 Route::get('/captura', 'HomeController@captura')->name('captura')->middleware('auth');
 Route::get('/artigosDel{id}', 'HomeController@del')->name('artigosDel')->middleware('auth');
-
-

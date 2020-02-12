@@ -19,7 +19,7 @@ class CreateArtigosTable extends Migration
             $table->foreign('id_usuario')
                     ->references('id')
                     ->on('users');
-            $table->string('titulo');
+            $table->string('titulo')->unique();
             $table->string('link');
             $table->timestamps();
         });

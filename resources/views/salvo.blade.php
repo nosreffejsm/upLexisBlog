@@ -20,16 +20,17 @@
 </div>
 
 <div class="bd-callout bd-callout-info">
-
     <div class="container">
     <table class="table table-striped table-dark">
         <thead>
           <tr> 
+            @if (count($registros) >= 1)
             <th scope="col">id</th>
             <th scope="col">Titulo</th>
             <th scope="col">Link</th>
             <th scope="col">Data criação</th>
             <th scope="col">Excluir</th>
+            @endif
           </tr>
         </thead>
         <tbody>
